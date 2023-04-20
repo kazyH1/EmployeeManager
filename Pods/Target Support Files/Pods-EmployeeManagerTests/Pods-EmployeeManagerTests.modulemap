@@ -1,0 +1,6 @@
+framework module Pods_EmployeeManagerTests {
+  umbrella header "Pods-EmployeeManagerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
