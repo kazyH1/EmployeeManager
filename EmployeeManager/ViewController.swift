@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        registerTableviewCell()
         fetchEmployees { [weak self] employees in
             DispatchQueue.main.async {
                 if let employees = employees {
@@ -35,10 +35,7 @@ class ViewController: UIViewController {
                     self?.tbv_QuanLiNV.reloadData()
                 }
             }
-            
         }
-        
-        registerTableviewCell()
     }
     
     func fetchEmployees(completion: @escaping ([Employee]?) -> Void) {
